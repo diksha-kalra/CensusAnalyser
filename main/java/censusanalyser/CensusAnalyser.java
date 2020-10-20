@@ -53,12 +53,12 @@ public class CensusAnalyser {
 			return numOfEnteries;
 		} catch (IOException e) {
 			throw new CensusAnalyserException(e.getMessage(),
-					CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
+					CensusAnalyserException.ExceptionType.STATE_CODE_FILE_PROBLEM);
 		} catch (IllegalStateException e) {
 			throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE);
 		} catch (Exception e) {
 			throw new CensusAnalyserException(e.getMessage(),
-					CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
+					CensusAnalyserException.ExceptionType.STATE_CODE_FILE_PROBLEM);
 		}
 	}
 }
